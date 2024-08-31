@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+    }
+</style>
+<body>
+    <h1>Iniciando com DOM</h1> <!-- Document Object Model -->
+    <p>Primeiro parágrafo</p>
+    <p>Segundo parágrafo</p>
+    <p>Entendendo <strong>DOM</strong> em JS</p>
+    <div id = "msg">Clique em mim</div>
+    <script>
+        /* É possivel selecionar elementos por: Marca | ID | Nome | Classe | Seletor |*/
+        var p1 = document.getElementsByTagName('p')[0]
+        document.write(p1.innerText)
+
+        /*var d = document.getElementById('msg')
+        d.style.background = 'red'
+        d.innerText = 'Waiting..'*/ 
+
+        /*var a = document.getElementsByName('msg')[0]
+        a.style.background = 'green' // por classe é a mesma coisa
+        a.innerText = 'Wyoming'*/
+        var car = window.document.querySelector("div#msg")
+    
+    </script>
+</body>
+</html>

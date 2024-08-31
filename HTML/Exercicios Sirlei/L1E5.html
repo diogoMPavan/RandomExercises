@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equação</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(12, 117, 214);
+            color: white;
+            font: normal 15pt;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bhaskara - Lista 1</h1>
+    <p>Valores da equação: </p>
+    <br>
+     A: <input type="number" id="a" onchange="bhaskara()">
+    <br>
+     B: <input type="number" id="b" onchange="bhaskara()">
+    <br>
+     C: <input type="number" id="c" onchange="bhaskara()">
+    <br>
+    <p><div id="equation"></div></p>
+    <br>
+    <div id="answer"></div>
+
+    <script>
+        function bhaskara(){
+            var a = document.getElementById('a')
+            var b = document.getElementById('b')
+            var c = document.getElementById('c')
+            var res = document.getElementById('answer')
+            var eq = document.getElementById('equation')
+            var A = Number(a.value)
+            var B = Number(b.value)
+            var C = Number(c.value)
+            var delta = Math.sqrt((B ** 2) - 4 * A * C)
+            var x1 = (-B + delta)/2*A
+            var x2 = (-B - delta)/2*A
+            eq.innerHTML = `${A}x² + ${B}x + ${C}`
+            res.innerHTML = `X1 = ${x1}  &  X2 = ${x2}`
+        }
+    </script>
+</body>
+</html>

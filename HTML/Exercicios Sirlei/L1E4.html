@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+    <style>
+        body{
+            background-color: rgb(224, 81, 109);
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: normal 15pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Idade Pessoa - Lista 1</h1>
+    <br>
+    Ano de Nascimento: <input type="number" name="Ano" id="ano">
+    <br>
+    <input type="button" value="Descobrir idade" onclick="calcular()">
+    <div id="result"></div>
+
+    <script>
+        function calcular(){
+            var ano = document.getElementById('ano')
+            var res = document.getElementById('result')
+            var Ano = Number(ano.value)
+            var idade = 2023 - Ano;
+            res.innerHTML = `A sua idade é ${idade}`
+        }
+    </script>
+</body>
+</html>

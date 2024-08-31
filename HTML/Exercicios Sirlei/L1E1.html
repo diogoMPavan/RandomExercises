@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Soma Simples</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font: normal 15pt garamond;
+        }
+        h1{
+            background-color: lightcoral;
+            width: 350px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Exercício 1 - Lista 1</h1>
+    <br>
+    Primeiro número: <input type="number" name="n1" id="n1">
+    <br>
+    Segundo número: <input type="number" name="n2" id="n2">
+    <br>
+    <input id="sum" type="button" value="Somar" onclick="somar()">
+    <div id="result"></div>
+
+    <script>
+        function somar(){
+            var n1 = document.getElementById('n1')
+            var n2 = document.getElementById('n2')
+            var num1 = Number(n1.value)
+            var num2 = Number(n2.value)
+            var result = document.getElementById('result')
+            var sum = num1 + num2
+            result.innerHTML = 'A soma entre ' + num1 + ' e ' + num2 + ' é: ' + sum
+        }
+    </script>
+</body>
+</html>

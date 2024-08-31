@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Media</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    Nota 1: <input type="number" name="n1" id="n1">
+    <br>
+    Nota 2: <input type="number" name="n2" id="n2">
+    <br>
+    Nota 3: <input type="number" name="n3" id="n3">
+    <br>
+    Nota 4: <input type="number" name="n4" id="n4">
+    <br>
+    <p><input type="button" value="Calcular média" onclick="media()"></p>
+    <p><br><div id="result"></div></p>
+    <script>
+        function media(){
+            var n1 = document.getElementById('n1')
+            var n2 = document.getElementById('n2')
+            var n3 = document.getElementById('n3')
+            var n4 = document.getElementById('n4')
+            var res = document.getElementById('result')
+            var nota1 = Number(n1.value)
+            var nota2 = Number(n2.value)
+            var nota3 = Number(n3.value)
+            var nota4 = Number(n4.value)
+            var media = (nota1 + nota2 + nota3 + nota4)/4
+            res.innerHTML = `A média é <strong>${media}</strong>`
+        }
+    </script>
+</body>
+</html>

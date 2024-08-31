@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            font-size: medium;
+            background-color: rgb(55, 104, 55);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <input type="button" value="+" id="sum" onclick="soma()">
+    <input type="button" value="-" id="sub" onclick="subtracao()">
+    <input type="button" value="*" id="mult" onclick="multiplica()">
+    <input type="button" value="/" id="div" onclick="divisao()">
+    <p><div id="result"></div></p>
+
+    <script>
+        var num1 = document.getElementById('n1')
+        var num2 = document.getElementById('n2')
+        var res = document.getElementById('result')
+        var n1 = null
+        var n2 = null
+        var operacao = null        
+        function soma(){
+            n1 = Number(num1.value)
+            n2 = Number(num2.value)
+            operacao = n1 + n2
+            res.innerHTML = `A soma entre <strong>${n1}</strong> e <strong>${n2}</strong> é <strong>${operacao}</strong>`
+        }
+        function subtracao(){
+            n1 = Number(num1.value)
+            n2 = Number(num2.value)
+            operacao = n1 - n2
+            res.innerHTML = `A diferença entre <strong>${n1}</strong> e <strong>${n2}</strong> é <strong>${operacao}</strong>`
+        }
+        function multiplica(){
+            n1 = Number(num1.value)
+            n2 = Number(num2.value)
+            operacao = n1 * n2
+            res.innerHTML = `O produto gerado por <strong>${n1}</strong> e <strong>${n2}</strong> é <strong>${operacao}</strong>`
+        }
+        function divisao(){
+            n1 = Number(num1.value)
+            n2 = Number(num2.value)
+            operacao = n1 / n2
+            res.innerHTML = `O quociente de <strong>${n1}</strong> por <strong>${n2}</strong> é <strong>${operacao}</strong>`
+        }
+    </script>
+</body>
+</html>

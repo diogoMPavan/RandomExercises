@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <style>
+        body{
+            background-color: lightblue;
+            color: black;
+            font: normal 15pt arial;
+        }
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Média - Lista 1</h1>
+    <input type="number" name="nota1" id="nota1">
+    <br>
+    <input type="number" name="nota2" id="nota2">
+    <br>
+    <input type="number" name="nota3" id="nota3">
+    <input id="btn" type="button" value="Calcular" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular(){
+            var n1 = document.getElementById('nota1')
+            var n2 = document.getElementById('nota2')
+            var n3 = document.getElementById('nota3')
+            var res = document.getElementById('res')
+            var grade1 = Number(parseFloat(n1.value));
+            var grade2 = Number(parseFloat(n2.value));
+            var grade3 = Number(parseFloat(n3.value));
+            var avg = (grade1 + grade2 + grade3)/3;
+            res.innerHTML = `The average between ${grade1}, ${grade2} and ${grade3} is ${avg}`
+        }
+    </script>
+</body>
+</html>

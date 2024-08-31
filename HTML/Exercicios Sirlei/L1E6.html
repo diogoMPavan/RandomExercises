@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior ou Menor</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-family:'Courier New', Courier, monospace
+        }
+        div#a1{
+            margin: auto;
+            background: red;
+            color: white;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        div#a2{
+            margin: auto;
+            background: green;
+            color: white;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        div#a3{
+            margin: auto;
+            background: blue;
+            color: white;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maior ou Menor que 0</h1>
+    <br>
+    Número: <input type="number" id="num" onchange="position()">
+    <br>
+    <p><div id="a1"></div></p>
+    <p><div id="a2"></div></p>
+    <p><div id="a3"></div></p>
+
+    <script>
+        var num = document.getElementById('num')
+        var a1 = document.getElementById('a1')
+        var a2 = document.getElementById('a2')
+        var a3 = document.getElementById('a3')
+        function position(){
+            var numero = Number(num.value)
+            if (numero > 0){
+                a1.innerText = numero
+            }
+            else{
+                a1.innerText = ""
+            }
+            if (numero == 0){
+                a2.innerText = numero
+            }
+            else{
+                a2.innerText = ""
+            }
+            if (numero < 0){
+                a3.innerText = numero
+            }
+            else{
+                a3.innerText = ""
+            }
+        }
+    </script>
+</body>
+</html>

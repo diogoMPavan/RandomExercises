@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retangulo</title>
+    <style>
+        body{
+            background-color: lightseagreen;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Área de um Retângulo - Lista 1</h1>
+    <br>
+    Lado 1: <input type="number" name="lado1" id="lado1">
+    <br>
+    Lado 2: <input type="number" name="lado2" id="lado2">
+    <br> 
+    <p><input type="button" value="Calcular Área" onclick="calcular()"></p>
+    <div id="res"></div>
+
+    <script>
+        function calcular(){
+            var l1 = document.getElementById('lado1')
+            var l2 = document.getElementById('lado2')
+            var res = document.getElementById('res')
+            var lado1 = Number(l1.value)
+            var lado2 = Number(l2.value)
+            var area = lado1 * lado2
+            res.innerHTML = `O retangulo com lados ${l1.value} e ${l2.value} tem área: ${area}`
+        }
+    </script>
+</body>
+</html>
